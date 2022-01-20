@@ -11,17 +11,17 @@
                   </a>
                   <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                              <a class="nav-link" href="index.php">Accueil<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                              <a class="nav-link" href="#">Features</a>
+                              <a class="nav-link" href="historique_dossier.php">Historique du dossier</a>
                         </li>
                         <li class="nav-item">
-                              <a class="nav-link" href="#">Pricing</a>
+                              <a class="nav-link" href="stock_move.php">Mouvement de stock</a>
                         </li>
                   </ul>
                   <span class="navbar-text my-2 my-lg-0"><strong>
-                  Bienvenue
+                  IDENTIFIANT UTILISATEUR
                   </strong></span>
             </div>
       </nav>
