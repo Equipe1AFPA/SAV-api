@@ -25,19 +25,19 @@
 </head>
 <body>
 
- <?php include ('header.php');?>
+<?php include ('header.php');?>
 
- <div class="container objContainer">
-      <h1>Historique de gestion de dossier</h1>
-      <div class="row-inline">
-        <div class="row justify-content-start col-md-12 p-2">
-                  <div class="input-group">
-                    <div class="col-md-4 offset-md-1  p-2">
-                      <h5 class="select-title">N° dossier : MYDOSNUM </h5>
-                    </div>
-                    <div class="col-md-4 offset-md-1 p-2">
-                      <h5 class="select-title">Client : MONSIEURLECLIENT </h5>
-                    </div>
+<div class="container objContainer">
+  <h1>Historique de gestion de dossier</h1>
+  <div class="row-inline">
+    <div class="row justify-content-start col-md-12 p-2">
+      <div class="input-group">
+        <div class="col-md-4 offset-md-1  p-2">
+          <h5 class="select-title">N° dossier : MYDOSNUM </h5>
+        </div>
+        <div class="col-md-4 offset-md-1 p-2">
+          <h5 class="select-title">Client : MONSIEURLECLIENT </h5>
+        </div>
       </div>
       <table class="table table-striped">
         <thead>
@@ -45,7 +45,7 @@
             <th class="col-md-2 mx-auto p-2">Opérateur</th>
             <th class="col-md-1 mx-auto p-2">Département</th>
             <th class="col-md-2 mx-auto p-2">Date/heure</th>
-            <th class="col-md-6 mx-auto p-2">Opération éffectué</th>
+            <th class="col-md-6 mx-auto p-2">Opération effectuée</th>
           </tr>
         </thead>
         <tbody>
@@ -93,6 +93,8 @@
           </tr>
         </tbody>
       </table>
-
+    </div>
+  </div>
+</div>
 </body>
 </html>
