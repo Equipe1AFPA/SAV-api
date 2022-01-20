@@ -42,9 +42,11 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th class="col-md-2 p-2">Date/heure</th>
-            <th class="col-md-3 p-2">Type de dossier</th>
-            <th class="col-md-7 p-2">Opération éffectué</th>
+            <th class="col-md-1 mx-auto p-2">Type de dossier</th>
+            <th class="col-md-1 mx-auto p-2">Type d'opérateur</th>
+            <th class="col-md-1 mx-auto p-2">Nom opérateur</th>
+            <th class="col-md-2 mx-auto p-2">Date/heure</th>
+            <th class="col-md-6 mx-auto p-2">Opération éffectué</th>
           </tr>
         </thead>
         <tbody>
@@ -52,35 +54,49 @@
             <td>Ma2019-12</td>
             <td>Giraud</td>
             <td>Rome</td>
+            <td>Rome</td>
+            <td>Rome</td>
           </tr>
           <tr>
             <td>Av2019-1</td>
             <td>Durand</td>
+            <td>Madrid</td>
+            <td>Madrid</td>
             <td>Madrid</td>
           </tr>
           <tr>
             <td>Jt2019-36</td>
             <td>Joly</td>
             <td>Mexico</td>
+            <td>Mexico</td>
+            <td>Mexico</td>
           </tr>
           <tr>
             <td>Ju2019-36</td>
             <td>Expédition  (s)</td>
+            <td>Moscou</td>
+            <td>Moscou</td>
             <td>Moscou</td>
           </tr>
           <tr>
             <td>Ju2019-36</td>
             <td>Amar</td>
             <td>Amsterdam </td>
+            <td>Amsterdam </td>
+            <td>Amsterdam </td>
           </tr>
           <tr>
             <td>Ju2019-36</td>
             <td>Shuber</td>
             <td>Paris</td>
+            <td>Paris</td>
+            <td>Paris</td>
           </tr>
           <tr>
             <td>Ju2019-36</td>
             <td>Wald</td>
+            <td>New York</td>
+            <td>New York</td>
             <td>New York</td>
           </tr>
         </tbody>
