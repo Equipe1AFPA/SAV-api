@@ -58,43 +58,43 @@
             <td>Ma2019-12</td>
             <td>Giraud</td>
             <td>Attente de reception du/des produit(s)</td>
-            <td><a class="btn btn-secondary" href="#" role="button">Details</a></td>
+            <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
           <tr  class="table-primary">
             <td>Av2019-1</td>
             <td>Durand</td>
             <td> Produit(s) receptionné(s</td>
-            <td><a class="btn btn-secondary" href="#" role="button">Details</a></td>
+            <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
           <tr class="table-danger">
             <td>Jt2019-36</td>
             <td>Joly</td>
             <td>Diagnostique du/des produit(s)</td>
-            <td><a class="btn btn-secondary" href="#" role="button">Details</a></td>
+            <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
           <tr class="table-warning">
             <td>Ju2019-36</td>
             <td>Dupont</td>
             <td>Expédition partielle du/des produit (s)</td>
-            <td><a class="btn btn-secondary" href="#" role="button">Details</a></td>
+            <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
           <tr class="table-success">
             <td>Au2019-6</td>
             <td>Amar</td>
             <td>Cloturé </td>
-            <td><a class="btn btn-secondary" href="#" role="button">Details</a></td>
+            <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
           <tr class="table-dark">
             <td>No2019-9</td>
             <td>Shuber</td>
             <td>Annulé</td>
-            <td><a class="btn btn-secondary" href="#" role="button">Details</a></td>
+            <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
           <tr>
             <td>De2019-13</td>
             <td>Wald</td>
             <td>Attente de reception du/des produit(s)</td>
-            <td><a class="btn btn-secondary" href="#" role="button">Details</a></td>
+            <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
         </tbody>
       </table>

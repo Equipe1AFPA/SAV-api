@@ -30,11 +30,14 @@
   <div class="row-inline">
     <div class="row justify-content-start col-md-12 p-2">
       <div class="input-group">
-        <div class="col-md-4 offset-md-1  p-2">
+        <div class="col-md-4   p-2">
           <h5 class="select-title">N° dossier : MYDOSNUM </h5>
         </div>
         <div class="col-md-4 offset-md-1 p-2">
           <h5 class="select-title">Client : MONSIEURLECLIENT </h5>
+        </div>
+        <div class="col-3">
+          <a class="btn btn-outline-primary btn-block btn-lg" href="../pages/visualisationdossier.php" role="button">Retour dossier en cours</a>
         </div>
       </div>
       <table class="table table-striped">

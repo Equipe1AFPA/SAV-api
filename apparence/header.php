@@ -14,9 +14,6 @@
                               <a class="nav-link" href="../pages/index.php">Accueil<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                              <a class="nav-link" href="../pages/historique_dossier.php">Historique du dossier</a>
-                        </li>
-                        <li class="nav-item">
                               <a class="nav-link" href="../pages/stock_move.php">Mouvement de stock</a>
                         </li>
                   </ul>
