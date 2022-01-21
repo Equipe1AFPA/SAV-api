@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="../css/login.css" />
     <title>Accueil_Auth</title>
 </head>
 <body>
@@ -24,7 +24,7 @@
 
     <!-- Logo de l'entreprise -->
     <div class="fadeIn first">
-      <img src="images/Menuiz_Man.png" id="icon" alt="User Icon" />
+      <img src="../images/Menuiz_Man.png" id="icon" alt="User Icon" />
     </div>
 
     <!-- Formulaire d'identification -->
