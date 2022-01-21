@@ -1,20 +1,19 @@
 <?php session_start(); ?>
 
-<?php include('header.php');?>
 
 <?php 
-$username = 'uname@uname';
-$userpsw = 'pass';
+$username = 'Menuiz';
+$userpsw = 'menuiz';
 
 // Validation du formulaire
 
-if (isset($_POST['uname']) && isset($_POST['psw'])){
-    if ($_POST['uname'] === $username  && $_POST['psw'] === $userpsw ){
+if (isset($_POST['login']) && isset($_POST['password'])){
+    if ($_POST['login'] === $username  && $_POST['password'] === $userpsw ){
             $_SESSION['loggedUser'] = $username;
      } else {
             $errorMessage = sprintf('Les informations envoyées ne permettent pas de vous identiifer : (%s/%s)',
-            $_POST['uname'],
-            $_POST['psw']
+            $_POST['login'],
+            $_POST['password']
             
         );
     }
@@ -22,9 +21,32 @@ if (isset($_POST['uname']) && isset($_POST['psw'])){
 
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../css/login.css" />
+    <title>Accueil_Auth</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- Lien de connexion bootstrap, php, jquery. -->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
 <!-- Si utilisateur non identifié on lui demande de s'identifier -->
 
 <?php if(!isset($_SESSION['loggedUser'])): ?>
+<div class="wrapper fadeInDown">
     
 <form action="" method="POST">
  
@@ -35,37 +57,35 @@ if (isset($_POST['uname']) && isset($_POST['psw'])){
             <?php echo $errorMessage; ?>
         </div>
     <?php endif; ?>
-  <div class="imgcontainer">
-    <img src="air2java.png" alt="Avatar" class="avatar">
+ 
+  <div id="formContent">
+
+    <!-- Logo de l'entreprise -->
+    <div class="fadeIn first">
+      <img src="../images/Menuiz_Man.png" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Formulaire d'identification -->
+    <form>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+      <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Mot de passe oublié -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
   </div>
-
-  <div class="container">
-    <label for="uname"><b>E-mail</b></label>
-    <input type="email" placeholder="Enter your mail" id="uname" name="uname" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
-
-    <button type="submit" class="loginbtn">Login</button>
-    <label>
-      <input type="checkbox" checked="unchecked" name="remember"> Remember me
-    </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
+</div>
 
 
 <!-- Si utilisateur identifié on l'envoit sur la page voulu -->
 
 <?php else: 
-    header('location: ma_page.php');
+    header('location: ../pages/index.php');
 endif;?>
     
-<?php include('footer.php'); ?>
-
-    <style><?php include_once('login.css');?></style>
+    <style><?php include_once('../css/login.css');?></style>
   

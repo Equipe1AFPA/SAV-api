@@ -24,10 +24,11 @@
 </head>
 <body>
 
+<?php if(isset($_SESSION['loggedUser'])): ?>
  <?php include ('../apparence/header.php');?>
 
 <div class="container objContainer ">
-      <a class="btn btn-primary btn-block btn-lg" href="pages/ticket.php" role="button">Création de Ticket</a>
+      <a class="btn btn-primary btn-block btn-lg" href="ticket.php" role="button">Création de Ticket</a>
 </div>
 
  <div class="container objContainer">
@@ -99,5 +100,8 @@
         </tbody>
       </table>
 </div>
+<?php else: 
+header('location: ../script/verif_session.php');
+endif;?>
 </body>
 </html>

@@ -19,7 +19,9 @@
                   </ul>
                   <span class="navbar-text my-2 my-lg-0"><strong>
                   IDENTIFIANT UTILISATEUR
-                  </strong></span>
+                  </strong>
+                  <a class="nav-link" href="../script/logout.php">Deconnexion<span class="sr-only">(current)</span></a>
+            </span>
             </div>
       </nav>
 </Header>
