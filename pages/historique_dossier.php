@@ -23,7 +23,7 @@
 </head>
 <body>
 
-<?php include ('header.php');?>
+<?php include ('../apparence/header.php');?>
 
 <div class="container objContainer">
   <h1>Historique de gestion de dossier</h1>

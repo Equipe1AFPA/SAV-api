@@ -25,7 +25,7 @@
 </head>
 <body>
 
- <?php include ('header.php');?>
+ <?php include ('../apparence/header.php');?>
 
  <div class="container objContainer">
       <h1>Visualisation des mouvements de stock</h1>

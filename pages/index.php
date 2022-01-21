@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,15 +8,13 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Acceuil</title>
 
-      <link rel="stylesheet" type="text/css" href='css/login.css'>
+      <!-- Lien de connexion bootstrap, php, jquery. -->
 
-<!-- Font Awesome -->
+<link rel="stylesheet" type="text/css" href='css/login.css'>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
   rel="stylesheet"/>
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
   rel="stylesheet"/>
-<!-- MDB -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -24,10 +24,10 @@
 </head>
 <body>
 
- <?php include ('header.php');?>
+ <?php include ('../apparence/header.php');?>
 
 <div class="container objContainer ">
-      <a class="btn btn-primary btn-block btn-lg" href="ticket.php" role="button">Création de Ticket</a>
+      <a class="btn btn-primary btn-block btn-lg" href="pages/ticket.php" role="button">Création de Ticket</a>
 </div>
 
  <div class="container objContainer">

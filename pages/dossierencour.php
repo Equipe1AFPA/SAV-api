@@ -24,7 +24,7 @@
 </head>
 <body>
 
- <?php include ('header.php');?>
+ <?php include ('../apparence/header.php');?>
 
 
 </body>

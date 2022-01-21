@@ -7,17 +7,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarToggler">
                   <a class="navbar-brand" href="index.php">
-                        <img src="img\Menuiz_Man.png" width="50%" height="50%" alt="">
+                        <img src="../img\Menuiz_Man.png" width="50%" height="50%" alt="">
                   </a>
                   <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                              <a class="nav-link" href="index.php">Accueil<span class="sr-only">(current)</span></a>
+                              <a class="nav-link" href="../pages/index.php">Accueil<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                              <a class="nav-link" href="historique_dossier.php">Historique du dossier</a>
+                              <a class="nav-link" href="../pages/historique_dossier.php">Historique du dossier</a>
                         </li>
                         <li class="nav-item">
-                              <a class="nav-link" href="stock_move.php">Mouvement de stock</a>
+                              <a class="nav-link" href="../pages/stock_move.php">Mouvement de stock</a>
                         </li>
                   </ul>
                   <span class="navbar-text my-2 my-lg-0"><strong>
