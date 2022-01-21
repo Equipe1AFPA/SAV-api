@@ -89,7 +89,10 @@
                                     <option>Annulé</option>
                               </select>
                         </div>
-                        <div class="col-4">
+                        <div class="col-3">
+                              <a class="btn btn-primary btn-block btn-lg" href="diagnostic.php" role="button">Effectuer un diagnostique</a>
+                        </div>
+                        <div class="col-3">
                               <a class="btn btn-primary btn-block btn-lg" href="historique_dossier.php" role="button">Historique du dossier</a>
                         </div>
                   </div>
