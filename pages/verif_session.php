@@ -33,7 +33,7 @@ if (isset($_POST['login']) && isset($_POST['password'])){
     if ($_POST['login'] === $username  && $_POST['password'] === $userpsw ){
             $_SESSION['loggedUser'] = $username;
      } else {
-            $errorMessage = sprintf('Les informations envoyées ne permettent pas de vous identiifer ');
+            $errorMessage = sprintf('Les informations ne permettent pas de vous identiifer');
     }
 }
 ?>
