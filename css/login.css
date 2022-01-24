@@ -273,3 +273,7 @@ input[type=text]:placeholder {
 #icon {
   width:60%;
 }
+
+.table-row{
+  cursor:pointer;
+  }

@@ -10,7 +10,7 @@
 
       <!-- Lien de connexion bootstrap, php, jquery. -->
 
-<link rel="stylesheet" type="text/css" href='css/login.css'>
+<link rel="stylesheet" type="text/css" href='../css/login.css'>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -45,65 +45,57 @@
                   </form>
             </div>
       </div>
-      <table class="table table-striped">
+      <table class="table table-bordered table-striped table-hover">
         <thead>
           <tr>
             <th>Dossier N°</th>
             <th>N° de commande</th>
             <th>Nom du client</th>
             <th>Statut</th>
-            <th>Visualiser</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr class="table-row" data-href="../pages/visualisationdossier.php">
             <td>Ma2019-12</td>
             <td>Ma2019-12</td>
             <td>Giraud</td>
             <td>Attente de reception du/des produit(s)</td>
-            <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
-          <tr  class="table-dark">
+          <tr class="table-row" data-href="../pages/visualisationdossier.php">
             <td>Av2019-1</td>
             <td>Av2019-1</td>
             <td>Durand</td>
             <td> Produit(s) receptionné(s</td>
-            <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
-          <tr class="table-danger">
+          <tr class="table-row" data-href="../pages/visualisationdossier.php">
             <td>Jt2019-36</td>
             <td>Jt2019-36</td>
             <td>Joly</td>
             <td>En attente de diagnostique</td>
-            <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
-          <tr class="table-success">
+          <tr class="table-row" data-href="../pages/visualisationdossier.php">
             <td>Ju2019-36</td>
             <td>Ju2019-36</td>
             <td>Dupont</td>
             <td>En attente de cloture</td>
-            <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
-          <tr class="table-warning">
+          <tr class="table-row" data-href="../pages/visualisationdossier.php">
             <td>Au2019-6</td>
             <td>Au2019-6</td>
             <td>Amar</td>
             <td>Cloturé </td>
-            <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
-          <tr class="table-danger">
+          <tr class="table-row" data-href="../pages/visualisationdossier.php">
             <td>No2019-9</td>
             <td>No2019-9</td>
             <td>Shuber</td>
             <td>Annulé</td>
-            <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
-          <tr>
+          <tr class="table-row" data-href="../pages/visualisationdossier.php">
             <td>De2019-13</td>
             <td>De2019-13</td>
             <td>Wald</td>
             <td>Attente de reception du/des produit(s)</td>
-            <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
         </tbody>
       </table>
@@ -111,5 +103,14 @@
 <?php else: 
 header('location: verif_session.php');
 endif;?>
+
+<script>
+  $(document).ready(function($) {
+    $(".table-row").click(function() {
+        window.document.location = $(this).data("href");
+    });
+});
+</script>
+
 </body>
 </html>
