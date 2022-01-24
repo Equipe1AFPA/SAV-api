@@ -10,7 +10,6 @@
 
       <!-- Lien de connexion bootstrap, php, jquery. -->
 
-
 <link rel="stylesheet" type="text/css" href='../css/login.css'>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
   rel="stylesheet"/>
