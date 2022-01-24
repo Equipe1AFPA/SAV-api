@@ -46,7 +46,7 @@
             <option value="2">Two</option>
             <option value="3">Threeeeeeeeeeeeeeeeeeeeeeeeeeeqdqsdqdqdqsfqfqfqdqdqdqdqdqdqee</option>
         </select>
-      </
+      </div>
       <div class="col-md-2  offset-md-2 p-2">
         <h5 class="select-title">Lieu : </h5>
         <select class="form-select form-select-sm col-12" aria-label=".form-select-lg example">

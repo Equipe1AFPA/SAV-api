@@ -49,6 +49,7 @@
         <thead>
           <tr>
             <th>Dossier N°</th>
+            <th>N° de commande</th>
             <th>Nom du client</th>
             <th>Statut</th>
             <th>Visualiser</th>
@@ -57,11 +58,13 @@
         <tbody>
           <tr>
             <td>Ma2019-12</td>
+            <td>Ma2019-12</td>
             <td>Giraud</td>
             <td>Attente de reception du/des produit(s)</td>
             <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
           <tr  class="table-dark">
+            <td>Av2019-1</td>
             <td>Av2019-1</td>
             <td>Durand</td>
             <td> Produit(s) receptionné(s</td>
@@ -69,11 +72,13 @@
           </tr>
           <tr class="table-danger">
             <td>Jt2019-36</td>
+            <td>Jt2019-36</td>
             <td>Joly</td>
             <td>En attente de diagnostique</td>
             <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
           <tr class="table-success">
+            <td>Ju2019-36</td>
             <td>Ju2019-36</td>
             <td>Dupont</td>
             <td>En attente de cloture</td>
@@ -81,17 +86,20 @@
           </tr>
           <tr class="table-warning">
             <td>Au2019-6</td>
+            <td>Au2019-6</td>
             <td>Amar</td>
             <td>Cloturé </td>
             <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
           <tr class="table-danger">
             <td>No2019-9</td>
+            <td>No2019-9</td>
             <td>Shuber</td>
             <td>Annulé</td>
             <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
           <tr>
+            <td>De2019-13</td>
             <td>De2019-13</td>
             <td>Wald</td>
             <td>Attente de reception du/des produit(s)</td>
