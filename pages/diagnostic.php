@@ -1,4 +1,6 @@
- <!-- GERMAIN FLORIAN: Réalisation de la page de diagnostique (18/01) -->
+<?php session_start(); ?>
+
+<!-- GERMAIN FLORIAN: Réalisation de la page de diagnostique (18/01) -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
