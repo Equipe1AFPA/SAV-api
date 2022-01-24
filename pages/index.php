@@ -11,10 +11,8 @@
       <!-- Lien de connexion bootstrap, php, jquery. -->
 
 <link rel="stylesheet" type="text/css" href='css/login.css'>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-  rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-  rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -24,8 +22,10 @@
 </head>
 <body>
 
-<?php if(isset($_SESSION['loggedUser'])): ?>
- <?php include ('../apparence/header.php');?>
+<?php 
+  if(isset($_SESSION['loggedUser'])):
+  include ('../apparence/header.php');
+?>
 
 <div class="container objContainer ">
       <a class="btn btn-primary btn-block btn-lg" href="ticket.php" role="button">Création de Ticket</a>
@@ -61,7 +61,7 @@
             <td>Attente de reception du/des produit(s)</td>
             <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
-          <tr  class="table-primary">
+          <tr  class="table-dark">
             <td>Av2019-1</td>
             <td>Durand</td>
             <td> Produit(s) receptionné(s</td>
@@ -70,22 +70,22 @@
           <tr class="table-danger">
             <td>Jt2019-36</td>
             <td>Joly</td>
-            <td>Diagnostique du/des produit(s)</td>
-            <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
-          </tr>
-          <tr class="table-warning">
-            <td>Ju2019-36</td>
-            <td>Dupont</td>
-            <td>Expédition partielle du/des produit (s)</td>
+            <td>En attente de diagnostique</td>
             <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
           <tr class="table-success">
+            <td>Ju2019-36</td>
+            <td>Dupont</td>
+            <td>En attente de cloture</td>
+            <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
+          </tr>
+          <tr class="table-warning">
             <td>Au2019-6</td>
             <td>Amar</td>
             <td>Cloturé </td>
             <td><a class="btn btn-secondary" href="../pages/visualisationdossier.php" role="button">Details</a></td>
           </tr>
-          <tr class="table-dark">
+          <tr class="table-danger">
             <td>No2019-9</td>
             <td>Shuber</td>
             <td>Annulé</td>
@@ -101,7 +101,7 @@
       </table>
 </div>
 <?php else: 
-header('location: ../script/verif_session.php');
+header('location: verif_session.php');
 endif;?>
 </body>
 </html>
