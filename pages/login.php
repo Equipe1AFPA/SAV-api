@@ -55,7 +55,7 @@ spl_autoload_register(function ($class_name) {
     <!-- Formulaire d'identification -->
     <form>
       <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-      <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
       <input type="submit" class="fadeIn fourth" value="Log In">
     </form>
 
