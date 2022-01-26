@@ -23,7 +23,8 @@
 
 <!-- Validation du formulaire -->
 
-<?php
+<?php 
+  include ('../apparence/header.php');
 spl_autoload_register(function ($class_name) {
   include '../classes/'.$class_name . '.php';
 });
@@ -31,7 +32,7 @@ spl_autoload_register(function ($class_name) {
 
 <!-- Si utilisateur est non identifié on lui demande de s'identifier -->
 
-<div class="wrapper fadeInDown">
+<div class="wrapper2 fadeInDown2">
     
 <form action="" method="POST">
  
