@@ -25,6 +25,9 @@
 <?php 
   if(isset($_SESSION['loggedUser'])):
   include ('../apparence/header.php');
+  spl_autoload_register(function ($class_name) {
+    include '../classes/'.$class_name . '.php';
+});
 ?>
 
 <div class="container objContainer ">
@@ -101,7 +104,7 @@
       </table>
 </div>
 <?php else: 
-header('location: verif_session.php');
+header('location: login.php');
 endif;?>
 
 <script>

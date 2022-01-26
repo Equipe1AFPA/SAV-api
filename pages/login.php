@@ -1,10 +1,5 @@
 <?php session_start(); ?>
 
-<?php
-$username = "Menuiz";
-$userpsw = "menuiz";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,25 +24,22 @@ $userpsw = "menuiz";
 <!-- Validation du formulaire -->
 
 <?php
-if (isset($_POST['login']) && isset($_POST['password'])){
-    if ($_POST['login'] === $username  && $_POST['password'] === $userpsw ){
-            $_SESSION['loggedUser'] = $username;
-     } else {
-            $errorMessage = sprintf('Les informations ne permettent pas de vous identiifer');
-    }
-}
+spl_autoload_register(function ($class_name) {
+  include '../classes/'.$class_name . '.php';
+});
 ?>
 
 <!-- Si utilisateur est non identifié on lui demande de s'identifier -->
 
-<?php if(!isset($_SESSION['loggedUser'])): ?>
 <div class="wrapper fadeInDown">
     
 <form action="" method="POST">
  
 <!-- Si message d'erreur on l'affiche
  -->
-    <?php if(isset($errorMessage)): ?> 
+    <?php 
+    include '../controleur/LoginControler.php';
+    if(isset($errorMessage)): ?> 
         <div class ="alert alert-danger" role="alert">
             <?php echo $errorMessage; ?>
         </div>
@@ -76,11 +68,7 @@ if (isset($_POST['login']) && isset($_POST['password'])){
 </div>
 
 
-<!-- Si utilisateur identifié on l'envoit sur la page voulu -->
 
-<?php else: 
-    header('location: index.php');
-endif;?>
     
     <style><?php include_once('../css/login.css');?></style>
   
