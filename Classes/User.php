@@ -43,10 +43,11 @@ class User {
    
     public function save(){
         $connectorDB = Connect::getInstance();
-        if($this->identifiant === null){
+        if($this->id === null){
             $connectorDB->query("INSERT INTO `t_d_user_usr` (`USR_NAME`, `USR_PSW`, `UTP_ID`) VALUES (:identifiant, :hashPsw, :grade)");
         }else{
-            $connectorDB->query("UPDATE `t_d_user_usr` SET `USR_NAME` = :identifiant, `USR_PSW` = :hashPsw, `UTP_ID` = :grade WHERE `USR_NAME` = :identifiant ");
+            $connectorDB->query("UPDATE `t_d_user_usr` SET `USR_NAME` = :identifiant, `USR_PSW` = :hashPsw, `UTP_ID` = :grade WHERE `id` = :id ");
+            $connectorDB->bind('id', $this->id);
         }       
         $connectorDB->bind('identifiant', $this->identifiant);
         $connectorDB->bind('hashPsw', $this->password);
