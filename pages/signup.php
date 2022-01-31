@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php 
+  spl_autoload_register(function ($class_name) {
+    include '../classes/'.$class_name . '.php';
+  });
+  session_start(); 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +18,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/signup.css" />
     <title>Accueil_Auth</title>
 </head>
 <body>
@@ -21,14 +26,9 @@
 </body>
 </html>
 
-<!-- Validation du formulaire -->
+<!-- Inclusion du header et petit script pour inclure les classes. -->
 
-<?php 
-  include ('../apparence/header.php');
-spl_autoload_register(function ($class_name) {
-  include '../classes/'.$class_name . '.php';
-});
-?>
+<?php include ('../apparence/header.php');?>
 
 <!-- Si utilisateur est non identifié on lui demande de s'identifier -->
 
@@ -36,8 +36,7 @@ spl_autoload_register(function ($class_name) {
     
 <form action="" method="POST">
  
-<!-- Si message d'erreur on l'affiche
- -->
+<!-- Inclusion du controleur de création d'utilisateur. -->
     <?php 
     include '../controleur/signupcontroler.php';
     if(isset($errorMessage)): ?> 
@@ -57,8 +56,8 @@ spl_autoload_register(function ($class_name) {
     <form>
       <input type="text" id="nom" class="fadeIn second" name="nom" placeholder="Nom" required>
       <input type="text" id="prenom" class="fadeIn second" name="prenom" placeholder="Prenom" required>
-      <input type="text" id="password" class="fadeIn third" name="password" placeholder="password" required>
-      <input type="text" id="rpt_password" class="fadeIn third" name="rpt_password" placeholder="password" required>
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" required>
+      <input type="password" id="rpt_password" class="fadeIn third" name="rpt_password" placeholder="verify-password" required>
       <select id="user_type" class="fadeIn third" name="user_type">
           <option value="Admin">Administrateur</option>
           <option value="sav">Technicien SAV</option>
@@ -72,6 +71,5 @@ spl_autoload_register(function ($class_name) {
 
 
 
-    
-    <style><?php include_once('../css/login.css');?></style>
+   
   

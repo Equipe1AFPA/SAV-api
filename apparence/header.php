@@ -1,4 +1,4 @@
-<?php $username=$_SESSION['loggedUser'];?>
+<?php $username=$_SESSION['loggedUser']->getIdentifiant();?>
 
 <!-- Barre de navigation -->
 <Header>
@@ -17,6 +17,14 @@
                         <li class="nav-item">
                               <a class="nav-link" href="../pages/stock_move.php">Mouvement de stock</a>
                         </li>
+                        <?php if ($_SESSION['loggedUser']->getType() === '1'){
+                              echo <<<SIGNUP
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="../pages/signup.php">Création d'utilisateur</a>
+                                    </li>
+                                    SIGNUP;
+                              }
+                        ?>
                   </ul>
                   <span class="navbar-text my-2 my-lg-0"><strong>
                   <?php echo <<<USERNAME
@@ -24,7 +32,7 @@
                               USERNAME; 
                   ?>
                   </strong>
-                  <a class="nav-link" href="../script/logout.php">Deconnexion<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="../controleur/logoutControler.php">Deconnexion<span class="sr-only">(current)</span></a>
             </span>
             </div>
       </nav>

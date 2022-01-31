@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php 
+  spl_autoload_register(function ($class_name) {
+    include '../classes/'.$class_name . '.php';
+  });
+  session_start(); 
+?>
 
 <!-- GERMAIN FLORIAN: Réalisation de la page de diagnostique (18/01) -->
 <!DOCTYPE html>

@@ -2,12 +2,12 @@
 /* BASIC */
 
 html {
-  background-color: #56baed;
+  background-color: #ffffff;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif !important;
-  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  height: 100%;
 }
 
 a {
@@ -41,6 +41,16 @@ h2 {
   padding: 20px;
 }
 
+.wrapper2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 100px;
+}
+
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
@@ -64,7 +74,20 @@ h2 {
   border-radius: 0 0 10px 10px;
 }
 
-
+.objContainer {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  margin-top: 25px;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 10px;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);
+  text-align: center;
+}
 
 /* TABS */
 
@@ -115,7 +138,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   transform: scale(0.95);
 }
 
-input[type=text] {
+input[type=text],[type=password],#user_type {
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
@@ -136,12 +159,12 @@ input[type=text] {
   border-radius: 5px 5px 5px 5px;
 }
 
-input[type=text]:focus {
+input[type=text]:focus,[type=password]:focus,#user_type:focus  {
   background-color: #fff;
   border-bottom: 2px solid #5fbae9;
 }
 
-input[type=text]:placeholder {
+input[type=text]:placeholder,[type=password]:placeholder,#user_type:placeholder  {
   color: #cccccc;
 }
 
@@ -177,6 +200,28 @@ input[type=text]:placeholder {
     opacity: 0;
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDown2 {
+  -webkit-animation-name: fadeInDown2;
+  animation-name: fadeInDown2;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInDown2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
   }
   100% {
     opacity: 1;
@@ -260,3 +305,7 @@ input[type=text]:placeholder {
 #icon {
   width:60%;
 }
+
+.table-row{
+  cursor:pointer;
+  }

@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php 
+  spl_autoload_register(function ($class_name) {
+    include '../classes/'.$class_name . '.php';
+  });
+  session_start(); 
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -25,9 +30,6 @@
 <?php 
   if(isset($_SESSION['loggedUser'])):
   include ('../apparence/header.php');
-  spl_autoload_register(function ($class_name) {
-    include '../classes/'.$class_name . '.php';
-});
 ?>
 
 <div class="container objContainer ">

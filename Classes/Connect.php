@@ -13,7 +13,9 @@ class Connect {
 
     private $stmt;
 
-    public function __construct($host, $username, $password, $db) {
+    // Constructeur
+
+    private function __construct($host, $username, $password, $db) {
 
             $this->host = $host;
             $this->username = $username;
@@ -38,9 +40,12 @@ class Connect {
 
     }
 
+    // Fonction pour préparer une requête SQL.
     public function query($query){
         $this->stmt = $this->newDB->prepare($query);
     }
+
+    // Fonction pour bind un parametre automatiquement si le type n'est pas renté.
 
     public function bind($param, $value, $type =null){
         if(is_null($type)){
@@ -62,6 +67,7 @@ class Connect {
         $this->stmt->bindvalue($param, $value, $type);
     }
 
+    // Fonvtion pour executer notre requête SQL précédement préparé.
     public function execute(){
         return $this->stmt->execute();
 
@@ -72,39 +78,31 @@ class Connect {
             echo 'done with query';
     }
 
+    // Fonction pour fetchAll notre base de donnée.
+
     public function resultset(){
         $this->execute();
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function resultObject($class){
-        
-        return $this->stmt->setFetchMode(PDO::FETCH_INTO, $class);
-    }
+    // Fonction pour fetch un seul élément de notre base de donnée.
 
     public function single(){
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function validID($pID){
-        $this->query("SELECT 1 FROM USER where identifiant = :id");
-        $this->bind('id', $pID);
-        return $this->column();
-    }
-
-    public function column(){
-        $this->execute();
-        return $this->stmt->fetchColumn();
-    }
+    // Fonction statique permétant de se connecter à la base de données.
 
     public static function getInstance(){
         if(static::$instance === null){
-            static::$instance = new Connect('localhost', 'root', '', 'donnees_menuizman');
+            static::$instance = new Connect('localhost', 'Admin', 'Admin', 'donnees_menuizman');
         }
         return static::$instance;
     }
     
+    // Fonction permétant de retourner l'id du dernier id enregistré dans la db.
+
     public function getLastInsertID(){
         return $this->newDB->lastInsertId();
     }

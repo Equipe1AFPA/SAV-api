@@ -7,6 +7,7 @@ class Login {
     private $password;
     private $connectorDB;
 
+    // Constructeur
 
     public function __construct($userName,$password){
         
@@ -14,10 +15,14 @@ class Login {
         $this->setData($userName,$password);
     }
 
+    // Fonction setData qui a pour but de donner des valeurs aux variables de la classe.
+
     private function setData($userName,$password){
         $this->userName=$userName;
         $this->password=$password;
     }
+
+    // Fonction pour vérifier si notre userName et notre password existent et sont bien lié l'un a l'autre, et retourne en fonction du resultat TRUE si c'est vrai ou un message d'erreur si c'est faux.
 
     public function getLogged(){
         $connectorDB = Connect::getInstance();
@@ -26,7 +31,19 @@ class Login {
         $connectorDB->bind('userPassword', $this->password);
         $sqlResult= count($connectorDB->resultset());
         if ($sqlResult !== 0){
-            return TRUE;
+
+            // Création d'un objet user pour utiliser les valeur de l'utilisateur connecté via la session (comme son identifiant ou son type).
+            
+            $userData = $connectorDB->single();
+            if (count($userData) !== 0) {
+                $user= new User();
+                $user->setId($userData['USR_ID']);
+                $user->setIdentifiant($userData['USR_NAME']);
+                $user->setPassword($userData['USR_PSW']);
+                $user->setType($userData['UTP_ID']);
+            }
+
+        return $user;
 
         }else{
             throw new Exception("Nom d'utilisateur et mot de passe invalide");

@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php 
+  spl_autoload_register(function ($class_name) {
+    include '../classes/'.$class_name . '.php';
+  });
+  session_start(); 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,17 +25,6 @@
     
 </body>
 </html>
-
-<!-- Validation du formulaire -->
-
-<?php
-spl_autoload_register(function ($class_name) {
-  include '../classes/'.$class_name . '.php';
-});
-?>
-
-<!-- Si utilisateur est non identifié on lui demande de s'identifier -->
-
 <div class="wrapper fadeInDown">
     
 <form action="" method="POST">
@@ -65,10 +59,6 @@ spl_autoload_register(function ($class_name) {
     </div>
 
   </div>
-</div>
-
-
-
-    
-    <style><?php include_once('../css/login.css');?></style>
+</div>    
+<style><?php include_once('../css/login.css');?></style>
   
