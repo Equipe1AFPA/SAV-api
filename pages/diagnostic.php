@@ -34,72 +34,11 @@
 <!-- Intégration de la page header -->
 <?php include ('../apparence/header.php');?>
 
-<!-- Container pour la recherche et l'affichage de dossier -->
-      <div class="form-row form-group form-control col-12">
-            <div class="container objContainer col-3">
-            <h3><strong>Recherche et affichage des dossiers</strong></h3>
-                  <form>
-                        <div class="form-row form-group form-control">
-                              <h5 class="container">Recherche</h5>
-                              <div class="col-12">
-                                    <form action="#" method="get">
-                                          <div class="input-group">
-                                          <input class="form-control" id="system-search" name="q" placeholder="Recherche par numéro de commande" required>
-                                                <span class="input-group-btn">
-                                                      <button type="submit" class="btn btn-default"><i class="bi bi-search"></i></button>
-                                                </span>
-                                          </div>
-                                    </form>
-                              </div>
-                              <div class="col-12">
-                                    <form action="#" method="get">
-                                          <div class="input-group">
-                                          <input class="form-control" id="system-search" name="q" placeholder="Recherche par numéro de dossier" required>
-                                                <span class="input-group-btn">
-                                                      <button type="submit" class="btn btn-default"><i class="bi bi-search"></i></button>
-                                                </span>
-                                          </div>
-                                    </form>
-                              </div>
-                              <div class="col-12">
-                                    <form action="#" method="get">
-                                          <div class="input-group">
-                                          <input class="form-control" id="system-search" name="q" placeholder="Recherche par nom du client" required>
-                                                <span class="input-group-btn">
-                                                      <button type="submit" class="btn btn-default"><i class="bi bi-search"></i></button>
-                                                </span>
-                                          </div>
-                                    </form>
-                              </div>
-                              <div class="col-12">
-                                    <form action="#" method="get">
-                                          <div class="input-group">
-                                          <input class="form-control" id="system-search" name="q" placeholder="Recherche par date de commande" required>
-                                                <span class="input-group-btn">
-                                                      <button type="submit" class="btn btn-default"><i class="bi bi-search"></i></button>
-                                                </span>
-                                          </div>
-                                    </form>
-                              </div>
-                              <div class="form-group">
-                                    <a class="btn btn-primary btn-block btn-lg" href="" role="button">Rechercher</a>   
-                              </div>               
-                              <div class="form-group">
-                                    <a class="btn btn-primary btn-block btn-lg" href="" role="button">Réinitialiser</a>   
-                              </div>               
-                        </div>
-                        <div class="form-row form-group form-control">
-                              <div class="form-group col">
-                              <label for="bio">Dossiers</label>
-                              <textarea class="form-control shadow" id="bio"></textarea>
-                            </div>
-                        </div>
-                  </form>
-            </div>
-
-            <!-- Container pour les infos du dossier -->      
-            <div class="container objContainer">
-            <h3><strong>Informations du dossier</strong></h3>
+<!-- Container pour l'affichage de dossier -->
+<div class="form-row form-group form-control">          
+      <!-- Container pour les infos du dossier -->      
+      <div class="container objContainer">
+      <h3><strong>Informations du dossier</strong></h3>
             <form>
                   <div class="form-row form-group form-control">
                         <form>            
@@ -110,7 +49,7 @@
                               <div class="col-6 shadow">
                                     <label for="TypeDossier">Type de dossier</label>
                                     <input type="text" class="form-control" id="TypeDossier" placeholder=""> 
-                               </div>
+                              </div>
 
                               <div class="col-6 shadow">
                                     <label for="NuméroFournisseur">Numéro de fournisseur</label>
@@ -126,40 +65,37 @@
                                     <input type="text" class="form-control" id="DenominationClient"> 
                               </div>
 
-                              <div class="custom-file shadow col-6">
-                                    <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                                    <label class="custom-file-label" for="validatedCustomFile">Choisir un fichier/photo</label>
-                                    <div class="invalid-feedback">Lien invalide</div>
+                              <div class="col-6 file-field align-self-end">
+                                    <div class="btn btn-info btn-sm">
+                                    <input type="file">
                               </div>
-
-                        </form>     
-
-
-                        </div>
-                        <div class="form-row form-group form-control">
-
-                              <div class="col-sm-6">
-                                  <label for="bio">Détails dossier</label>
-                                  <textarea class="form-control shadow" id="DetailDossier" rows="3"></textarea>
-                              </div>        
-                              <div class="col-sm-6">
-                                  <label for="bio">Liste diagnostique</label>
-                                  <textarea class="form-control shadow" id="ListeDiagnostique" rows="3"></textarea>
-                              </div>         
-                        </div>
-
-                        <!-- Container pour les boutons-->
-                        <div class="form-row form-group form-control">
-                              <button type="button" class="btn btn-lg btn-primary">Reex client et solde dossier</button>
-                              <button type="button" class="btn btn-lg btn-primary">Reex client avec décompte de stock sans solde</button>
-                              <button type="button" class="btn btn-lg btn-primary">Reex client avec décompte de stock avec solde</button>
-                              <button type="button" class="btn btn-lg btn-primary">Remise en stock</button>
-                              <button type="button" class="btn btn-lg btn-primary">Solde du dossier</button>
-                              <button type="button" class="btn btn-lg btn-primary">Quitter</button>
-                        </div>      
-
+                        </form> 
                   </div>
+
+                                 
+                  </div>
+                  <div class="form-row form-group form-control">
+
+                        <div class="col-sm-6">
+                              <label for="bio">Détails dossier</label>
+                              <textarea class="form-control shadow" id="DetailDossier" rows="3"></textarea>
+                        </div>        
+                        <div class="col-sm-6">
+                              <label for="bio">Liste diagnostique</label>
+                              <textarea class="form-control shadow" id="ListeDiagnostique" rows="3"></textarea>
+                        </div>         
+                  </div>
+
+                  <!-- Container pour les boutons-->
+                  <div class="form-row form-group form-control d-grid gap-3">
+                        <button type="button" class="btn btn-lg btn-info mx-3 mb-3">Reex client et solde dossier</button>
+                        <button type="button" class="btn btn-lg btn-info mx-3 mb-3">Reex client avec décompte de stock sans solde</button>
+                        <button type="button" class="btn btn-lg btn-info mx-3 mb-3">Reex client avec décompte de stock avec solde</button>
+                        <button type="button" class="btn btn-lg btn-info mx-3 mb-3">Remise en stock</button>
+                        <button type="button" class="btn btn-lg btn-info mx-3 mb-3">Solde du dossier</button>
+                        <button type="button" class="btn btn-lg btn-info mx-3 mb-3">Quitter</button>
+                  </div>      
             </form>
-      </div>
+      </div>     
+</div>
 </body>
- 

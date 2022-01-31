@@ -1,8 +1,8 @@
 <?php 
-  spl_autoload_register(function ($class_name) {
-    include '../classes/'.$class_name . '.php';
-  });
-  session_start(); 
+spl_autoload_register(function ($class_name) {
+  include '../classes/'.$class_name . '.php';
+});
+session_start(); 
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +42,7 @@
             <div class="col-md-3 mx-auto p-2">
                   <form action="#" method="get">
                         <div class="input-group">
-                        <input class="form-control" id="system-search" name="q" placeholder="Rechercher un dossier" required>
+                        <input class="form-control" id="dossencourt_search" name="q" placeholder="Rechercher un dossier" required>
                               <span class="input-group-btn">
                                     <button type="submit" class="btn btn-default"><i class="bi bi-search"></i></button>
                               </span>
@@ -59,13 +59,7 @@
             <th>Statut</th>
           </tr>
         </thead>
-        <tbody>
-          <tr class="table-row" data-href="../pages/visualisationdossier.php">
-            <td>Ma2019-12</td>
-            <td>Ma2019-12</td>
-            <td>Giraud</td>
-            <td>Attente de reception du/des produit(s)</td>
-          </tr>
+        <tbody id="dossencourt">
           <tr class="table-row" data-href="../pages/visualisationdossier.php">
             <td>Av2019-1</td>
             <td>Av2019-1</td>
@@ -115,6 +109,16 @@ endif;?>
         window.document.location = $(this).data("href");
     });
 });
+
+$(document).ready(function(){
+  $("#dossencourt_search").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#dossencourt tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
 </script>
 
 </body>

@@ -68,6 +68,7 @@ class Connect {
     }
 
     // Fonvtion pour executer notre requête SQL précédement préparé.
+    
     public function execute(){
         return $this->stmt->execute();
 
