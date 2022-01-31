@@ -17,7 +17,7 @@ class User {
     }
 
     public function getPassword(){
-        return $this->getPassword;
+        return $this->password;
     }
 
     public function getType(){
