@@ -33,7 +33,7 @@ session_start();
 ?>
 
 <div class="container objContainer ">
-      <a class="btn btn-primary btn-block btn-lg" href="ticket.php" role="button">Création de Ticket</a>
+      <a class="button btn-block btn-lg" href="ticket.php" role="button">Création de Ticket</a>
 </div>
 
  <div class="container objContainer">

@@ -150,7 +150,7 @@
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
       </div>
       <div class="form-group">
-            <a class="btn btn-primary btn-block btn-lg" href="Details.php" role="button">Création de ticket</a>
+            <a class="button btn-block btn-lg" href="Details.php" role="button">Création de ticket</a>
       </div>
   </div>
 </form>

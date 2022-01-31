@@ -66,7 +66,7 @@
                               </div>
 
                               <div class="col-6 file-field align-self-end">
-                                    <div class="btn btn-info btn-sm">
+                                    <div class="button btn-sm">
                                     <input type="file">
                               </div>
                         </form> 
@@ -88,12 +88,12 @@
 
                   <!-- Container pour les boutons-->
                   <div class="form-row form-group form-control d-grid gap-3">
-                        <button type="button" class="btn btn-lg btn-info mx-3 mb-3">Reex client et solde dossier</button>
-                        <button type="button" class="btn btn-lg btn-info mx-3 mb-3">Reex client avec décompte de stock sans solde</button>
-                        <button type="button" class="btn btn-lg btn-info mx-3 mb-3">Reex client avec décompte de stock avec solde</button>
-                        <button type="button" class="btn btn-lg btn-info mx-3 mb-3">Remise en stock</button>
-                        <button type="button" class="btn btn-lg btn-info mx-3 mb-3">Solde du dossier</button>
-                        <button type="button" class="btn btn-lg btn-info mx-3 mb-3">Quitter</button>
+                        <button type="button" class="button mx-3 mb-3">Reex client et solde dossier</button>
+                        <button type="button" class="button mx-3 mb-3">Reex client avec décompte de stock sans solde</button>
+                        <button type="button" class="button mx-3 mb-3">Reex client avec décompte de stock avec solde</button>
+                        <button type="button" class="button mx-3 mb-3">Remise en stock</button>
+                        <button type="button" class="button mx-3 mb-3">Solde du dossier</button>
+                        <button type="button" class="button mx-3 mb-3">Quitter</button>
                   </div>      
             </form>
       </div>     

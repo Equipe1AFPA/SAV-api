@@ -97,10 +97,10 @@
                               </select>
                         </div>
                         <div class="col-3">
-                              <a class="btn btn-primary btn-block btn-lg" href="diagnostic.php" role="button">Effectuer un diagnostique</a>
+                              <a class="button btn-block btn-lg" href="diagnostic.php" role="button">Diagnostique</a>
                         </div>
                         <div class="col-3">
-                              <a class="btn btn-primary btn-block btn-lg" href="historique_dossier.php" role="button">Historique du dossier</a>
+                              <a class="button btn-block btn-lg" href="historique_dossier.php" role="button">Historique du dossier</a>
                         </div>
                   </div>
                   <div class="form-group form-control">
