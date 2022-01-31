@@ -34,7 +34,7 @@
 
       <div class="container objContainer">
             <div class="container row">
-                  <h3 class="col"><strong>Dossier N° </strong></h3>
+                  <h3 class="col"><strong>Dossier N° <?php var_dump($_SESSION['currentFolder']); $_SESSION['currentFolder']->getOrdernumber();?> </strong></h3>
                   <h3 class="col"><strong>Client : </strong></h3>
             </div>
             <div class="container form-group form-control ">

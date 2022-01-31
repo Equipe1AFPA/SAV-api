@@ -37,67 +37,20 @@ session_start();
 </div>
 
  <div class="container objContainer">
-      <h1>Les dossiers en cours</h1>
-      <div class="row-inline">
-            <div class="col-md-3 mx-auto p-2">
-                  <form action="#" method="get">
-                        <div class="input-group">
-                        <input class="form-control" id="dossencourt_search" name="q" placeholder="Rechercher un dossier" required>
-                              <span class="input-group-btn">
-                                    <button type="submit" class="btn btn-default"><i class="bi bi-search"></i></button>
-                              </span>
-                        </div>
-                  </form>
-            </div>
-      </div>
-      <table class="table table-bordered table-striped table-hover">
-        <thead>
-          <tr>
-            <th>Dossier N°</th>
-            <th>N° de commande</th>
-            <th>Nom du client</th>
-            <th>Statut</th>
-          </tr>
-        </thead>
-        <tbody id="dossencourt">
-          <tr class="table-row" data-href="../pages/visualisationdossier.php">
-            <td>Av2019-1</td>
-            <td>Av2019-1</td>
-            <td>Durand</td>
-            <td> Produit(s) receptionné(s</td>
-          </tr>
-          <tr class="table-row" data-href="../pages/visualisationdossier.php">
-            <td>Jt2019-36</td>
-            <td>Jt2019-36</td>
-            <td>Joly</td>
-            <td>En attente de diagnostique</td>
-          </tr>
-          <tr class="table-row" data-href="../pages/visualisationdossier.php">
-            <td>Ju2019-36</td>
-            <td>Ju2019-36</td>
-            <td>Dupont</td>
-            <td>En attente de cloture</td>
-          </tr>
-          <tr class="table-row" data-href="../pages/visualisationdossier.php">
-            <td>Au2019-6</td>
-            <td>Au2019-6</td>
-            <td>Amar</td>
-            <td>Cloturé </td>
-          </tr>
-          <tr class="table-row" data-href="../pages/visualisationdossier.php">
-            <td>No2019-9</td>
-            <td>No2019-9</td>
-            <td>Shuber</td>
-            <td>Annulé</td>
-          </tr>
-          <tr class="table-row" data-href="../pages/visualisationdossier.php">
-            <td>De2019-13</td>
-            <td>De2019-13</td>
-            <td>Wald</td>
-            <td>Attente de reception du/des produit(s)</td>
-          </tr>
-        </tbody>
-      </table>
+  <h1>Les dossiers en cours</h1>
+  <div class="row-inline">
+        <div class="col-md-3 mx-auto p-2">
+              <form action="#" method="get">
+                    <div class="input-group">
+                    <input class="form-control" id="dossencourt_search" name="q" placeholder="Rechercher un dossier" required>
+                          <span class="input-group-btn">
+                                <button type="submit" class="btn btn-default"><i class="bi bi-search"></i></button>
+                          </span>
+                    </div>
+              </form>
+        </div>
+  </div>
+<?php include ('../controleur/FolderControler.php');?>
 </div>
 <?php else: 
 header('location: login.php');
