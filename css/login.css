@@ -104,7 +104,7 @@ h2.active {
 
 /* FORM TYPOGRAPHY*/
 
-input[type=button], input[type=submit], input[type=reset], .button  {
+input[type=button], input[type=submit], input[type=reset]  {
   background-color: #56baed;
   border: none;
   color: white;
@@ -124,6 +124,15 @@ input[type=button], input[type=submit], input[type=reset], .button  {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.button {
+  background-color: #56baed;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
@@ -308,4 +317,34 @@ input[type=text]:placeholder,[type=password]:placeholder,#user_type:placeholder 
 
 .table-row{
   cursor:pointer;
+  }
+
+  #colorID1 {
+    background-color: white;
+    color: black;
+  }
+  
+  #colorID2 {
+    background-color: darkgray;
+    color: white;
+  }
+  
+  #colorID3 {
+    background-color: orange;
+    color: black;
+  }
+  
+  #colorID4 {
+    background-color: yellow;
+    color: black;
+  }
+  
+  #colorID5 {
+    background-color: red;
+    color: white;
+  }
+  
+  #colorID6 {
+    background-color: green;
+    color: white;
   }

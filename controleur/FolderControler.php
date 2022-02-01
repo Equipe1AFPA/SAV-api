@@ -18,22 +18,22 @@ function showTable($pTable){
         $id = $pRow->getId();
         switch ($status) {
             case 'Attente de reception du/des produit(s)':
-                $colorId = 1;
+                $colorId = 'colorID1';
                 break;
             case 'Produit(s) réceptionné(s)':
-                $colorId = 2;
+                $colorId = 'colorID2';
                 break;
             case 'En attente de diagnostique':
-                $colorId = 3;
+                $colorId = 'colorID3';
                 break;
             case 'En attente de clôture':
-                $colorId = 4;
+                $colorId = 'colorID4';
                 break;
             case 'Clôturé':
-                $colorId = 5;
+                $colorId = 'colorID5';
                 break;
             case 'Annulé':
-                $colorId = 6;
+                $colorId = 'colorID6';
                 break;
         }
         echo <<<FOLDER_TABLE
