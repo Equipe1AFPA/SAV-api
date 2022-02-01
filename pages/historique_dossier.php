@@ -3,6 +3,7 @@
     include '../classes/'.$class_name . '.php';
   });
   session_start(); 
+  $myID = $_GET['folid'];
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +45,7 @@
           <h5 class="select-title">Client : MONSIEURLECLIENT </h5>
         </div>
         <div class="col-3">
-          <a class="btn btn-outline-primary btn-block btn-lg" href="../pages/visualisationdossier.php" role="button">Retour dossier en cours</a>
+          <a class="btn btn-outline-primary btn-block btn-lg" href="../pages/visualisationdossier.php?folid=<?php echo $myID?>" role="button">Retour dossier en cours</a>
         </div>
       </div>
       <table class="table table-striped">

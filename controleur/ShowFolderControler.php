@@ -1,5 +1,6 @@
 <?php
-$folder = FolderRepository::getByID($_GET['folid']);
+$myID = $_GET['folid'];
+$folder = FolderRepository::getByID($myID);
 
 $folderNum = $folder->getFolderNumber();
 $folderName = $folder->getDenomination();

@@ -2,13 +2,11 @@
 
 <?php 
 
-class Folder {
+class Order {
     private $id;
-    private $HTY_ID;
     private $denomination;
     private $type;
     private $ordernumber;
-    private $folderNumber;
     private $status;
     private $adrLine1;
     private $adrLine2;
@@ -17,30 +15,8 @@ class Folder {
     private $adrCountry;
     private $adrState;
     private $adrCity;
-    private $creationDate;
-    private $receptionDate;
+    private $date;
     private $folderDetail;
-
-
-    public function getFolderNumber(){
-        return $this->folderNumber;
-    }
-
-
-    public function setFolderNumber($folderNumber){
-        $this->folderNumber = $folderNumber;
-        return $this;
-    }
-
-    public function getHTYID(){
-        return $this->HTY_ID;
-    }
-
-
-    public function setHTYID($HTY_ID){
-        $this->HTY_ID = $HTY_ID;
-        return $this;
-    }
 
     public function getDenomination(){
         return $this->denomination;
@@ -132,21 +108,12 @@ class Folder {
         return $this;
     }
 
-    public function getCreationDate(){
-        return $this->creationDate;
+    public function getDate(){
+        return $this->date;
     }
 
-    public function setCreationDate($creationDate){
-        $this->creationDate = $creationDate;
-        return $this;
-    }
-
-    public function getReceptionDate(){
-        return $this->receptionDate;
-    }
-
-    public function setReceptionDate($receptionDate){
-        $this->receptionDate = $receptionDate;
+    public function setDate($date){
+        $this->date = $date;
         return $this;
     }
 
