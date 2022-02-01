@@ -13,4 +13,5 @@ $adrZip = $folder->getAdrZip();
 $adrCountry = $folder->getAdrCountry();
 $adrState = $folder->getAdrState();
 $adrCity = $folder->getAdrCity();
+$status = $folder->getStatus();
 ?>

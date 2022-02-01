@@ -16,8 +16,28 @@ function showTable($pTable){
         $denomination = $pRow->getDenomination();
         $status = $pRow->getStatus();
         $id = $pRow->getId();
+        switch ($status) {
+            case 'Attente de reception du/des produit(s)':
+                $colorId = 1;
+                break;
+            case 'Produit(s) réceptionné(s)':
+                $colorId = 2;
+                break;
+            case 'En attente de diagnostique':
+                $colorId = 3;
+                break;
+            case 'En attente de clôture':
+                $colorId = 4;
+                break;
+            case 'Clôturé':
+                $colorId = 5;
+                break;
+            case 'Annulé':
+                $colorId = 6;
+                break;
+        }
         echo <<<FOLDER_TABLE
-            <tr class="table-row" data-href="../pages/visualisationdossier.php?folid=$id">
+            <tr id="$colorId" class="table-row" data-href="../pages/visualisationdossier.php?folid=$id">
                 <td>$folderNumber</td>
                 <td>$ordernumber</td>
                 <td>$denomination</td>

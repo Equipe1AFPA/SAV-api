@@ -89,15 +89,7 @@
                               </div>
                               <div class="form-group form-control form-row align-items-center justify-content-around">
                                     <div class="col-4">
-                                          <label for="formSelectStatus">Status du dossier</label>
-                                          <select class="form-control" id="formSelectStatus">
-                                                <option>Attente de reception du/des produit(s)</option>
-                                                <option>Produit(s) receptionné(s)</option>
-                                                <option>Diagnostique du/des produit(s)</option>
-                                                <option>Expédition partielle du/des produit (s)</option>
-                                                <option>Cloturé</option>
-                                                <option>Annulé</option>
-                                          </select>
+                                          <p class="col">Date de création : <br> $status</p>
                                     </div>
                                     <div class="col-3">
                                           <a class="button btn-block btn-lg" href="diagnostic.php" role="button">Diagnostique</a>
