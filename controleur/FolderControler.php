@@ -15,9 +15,9 @@ function showTable($pTable){
         $ordernumber = $pRow->getOrdernumber();
         $denomination = $pRow->getDenomination();
         $status = $pRow->getStatus();
-        $_SESSION['currentFolder'] = $pRow;
+        $id = $pRow->getId();
         echo <<<FOLDER_TABLE
-            <tr class="table-row" data-href="../pages/visualisationdossier.php?folnum=<?php echo $folderNumber ?>">
+            <tr class="table-row" data-href="../pages/visualisationdossier.php?folid=$id">
                 <td>$folderNumber</td>
                 <td>$ordernumber</td>
                 <td>$denomination</td>
