@@ -1,7 +1,7 @@
 <?php
 $myID = $_GET['folid'];
-$folder = FolderRepository::getByID($myID);
 
+$folder = FolderRepository::getByID($myID);
 $folderNum = $folder->getFolderNumber();
 $folderName = $folder->getDenomination();
 $folderCreation = $folder->getCreationDate();

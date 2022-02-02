@@ -29,8 +29,7 @@
     
 <form action="" method="POST">
  
-<!-- Si message d'erreur on l'affiche
- -->
+<!-- Si message d'erreur on l'affiche -->
     <?php 
     include '../controleur/LoginControler.php';
     if(isset($errorMessage)): ?> 

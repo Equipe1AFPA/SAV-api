@@ -1,6 +1,6 @@
 <?php
 
-
+// Fonction qui permet de générer le tableuau d'affichage des dossiers.
 function showTable($pTable){
     echo <<<FOLDER_TABLE_HEADER
             <table class="table table-bordered table-striped table-hover">
@@ -16,6 +16,9 @@ function showTable($pTable){
         $denomination = $pRow->getDenomination();
         $status = $pRow->getStatus();
         $id = $pRow->getId();
+
+        // Switch pour assigner un ID en fonction du statut du dossier.
+
         switch ($status) {
             case 'Attente de reception du/des produit(s)':
                 $colorId = 'colorID1';
@@ -48,6 +51,7 @@ function showTable($pTable){
     echo "</table>";
 }
 
+// Connexion à la classe FolderRepository qui permet la création de chaque objet Folder pour les affichezr dans mon tableau.
 $arrFolder = FolderRepository::findAll();
 showTable($arrFolder)
 

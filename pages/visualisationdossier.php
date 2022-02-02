@@ -92,7 +92,7 @@
                                           <p class="col">Date de création : <br> $status</p>
                                     </div>
                                     <div class="col-3">
-                                          <a class="button btn-block btn-lg" href="diagnostic.php" role="button">Diagnostique</a>
+                                          <a class="button btn-block btn-lg" href="diagnostic.php?folid=$myID" role="button">Diagnostique</a>
                                     </div>
                                     <div class="col-3">
                                           <a class="button btn-block btn-lg" href="historique_dossier.php?folid=$myID" role="button">Historique du dossier</a>

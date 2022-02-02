@@ -48,6 +48,9 @@ class User {
    
     public function save(){
         $connectorDB = Connect::getInstance();
+
+        // Vérification de si un utilisateur a le meme identifiant pour choisir entre update ou créer.
+        
         $connectorDB->query("SELECT `USR_ID` FROM `t_d_user_usr` WHERE `USR_NAME` = :identifiant ");
         $connectorDB->bind('identifiant', $this->identifiant);
         if (!empty($connectorDB->single())){
@@ -73,28 +76,6 @@ class User {
         if($this->id ===null){
             $this->setId($connectorDB->getLastInsertID());
         }
-    }
-
-    // Création d'une fonction pour supprimer un utilisateur.
-
-    public function deleteUser(){
-        $connectorDB = Connect::getInstance();
-        $connectorDB->query("SELECT `USR_ID` FROM `t_d_user_usr` WHERE `USR_NAME` = :identifiant ");
-        $connectorDB->bind('identifiant', $this->identifiant);
-        if (!empty($connectorDB->single())){
-            $idData = $connectorDB->single();
-            $this->id = $idData['USR_ID'];
-        }
-        if($this->id !== null){
-            $connectorDB->query("DELETE FROM `t_d_user_usr` WHERE `USR_ID` = :id");
-            $connectorDB->bind('id', $this->id);
-            echo <<<DELETE_USER
-                    L'utilisateur $this->identifiant a été supprimé.
-                    DELETE_USER;
-        }else{
-            echo "Cet utilisateur n'existe pas";
-        }       
-        $connectorDB->execute();        
     }
 }
 

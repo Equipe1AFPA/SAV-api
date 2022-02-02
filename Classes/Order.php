@@ -18,6 +18,8 @@ class Order {
     private $date;
     private $folderDetail;
 
+    // Création des getter et setter.
+
     public function getDenomination(){
         return $this->denomination;
     }
@@ -142,28 +144,6 @@ class Order {
     public function setFolderDetail($folderDetail){
         $this->folderDetail = $folderDetail;
         return $this;
-    }
-    
-    public function save(){
-        $connectorDB = Connect::getInstance();
-        if($this->id === null){
-            $connectorDB->query("INSERT INTO `t_d_savfolder_fol` (`FOL_ID`, `HTY_ID`, `FOL_FOLDERNUMBER`, `FOL_TYPE`, `FOL_STATUS`, `FOL_CREATIONDATE`, `FOL_RECEPTIONDATE`, `FOL_DETAIL`) VALUES (:id, :htyid, :foldernum, :foltype, :folstatus, :creationdate, :receptiondate, :folderdetail)");
-        }else{
-            $connectorDB->query("UPDATE `t_d_savfolder_fol` SET `FOL_ID` = :id, `HTY_ID` = :htyid, `FOL_FOLDERNUMBER` = :foldernum, `FOL_TYPE` = :foltype,  `FOL_STATUS` = :folstatus, `FOL_CREATIONDATE` = :creationdate, `FOL_RECEPTIONDATE` = :receptiondate, `FOL_DETAIL` = :folderdetail WHERE `FOL_ID` = :id ");
-            $connectorDB->bind('id', $this->id);
-        }       
-        $connectorDB->bind('id', $this->id);
-        $connectorDB->bind('htyid', $this->HTY_ID);
-        $connectorDB->bind('foldernum', $this->foldernumber);
-        $connectorDB->bind('foltype', $this->type);
-        $connectorDB->bind('folstatus', $this->status);
-        $connectorDB->bind('creationdate', $this->creationDate);
-        $connectorDB->bind('folderdetail', $this->folderDetail);
-        $connectorDB->bind('receptiondate', $this->receptionDate);
-        $connectorDB->execute();
-        if($this->id === null){
-            $this->setId($connectorDB->getLastInsertID());
-        }
     }
 }
 ?>

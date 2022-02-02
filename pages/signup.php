@@ -63,10 +63,7 @@
           <option value="sav">Technicien SAV</option>
           <option value="hotline">Technicien Hotline</option>
     </select>
-    <div class="d-flex justify-content-evenly">
       <input type="submit" class="col-md-3 mx-auto p-2" value="Créer">
-      <input type="submit" class="col-md-3 mx-auto p-2" value="Supprimer">
-    </div>
     </form>
 
   </div>

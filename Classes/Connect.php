@@ -107,7 +107,6 @@ class Connect {
     public function getLastInsertID(){
         return $this->newDB->lastInsertId();
     }
-
 }
 
 ?>

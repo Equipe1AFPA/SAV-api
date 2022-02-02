@@ -17,6 +17,8 @@
                         <li class="nav-item">
                               <a class="nav-link" href="../pages/stock_move.php">Mouvement de stock</a>
                         </li>
+
+                        <!-- On regarde le type de l'utilisateur connecté via l'objet User présent dans notre variable de session pour afficher ou non le bouton de création d'un utilisateur. -->
                         <?php if ($_SESSION['loggedUser']->getType() === '1'){
                               echo <<<SIGNUP
                                     <li class="nav-item">

@@ -61,7 +61,7 @@
         }
 
 
-
+        //  Fonction pour générer le tableau d'affichage des dossier disponnible une fois filtré par la recherche.
         function showTable($pTable){
             echo <<<FOLDER_TABLE_HEADER
                 <div class="form-row form-group form-control">
@@ -108,7 +108,7 @@
             } 
             echo "</table></div>";
         }
-
+        // On se connecte à la classe OrderRepository qui permet de générer un bobjet pour chaque dossier.
         $arrOrder = OrderRepository::findAll($requestWhere);
         showtable($arrOrder);
     }
