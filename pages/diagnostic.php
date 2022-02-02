@@ -32,9 +32,10 @@
 <body>
 
 <!-- Intégration de la page header -->
-<?php include ('../apparence/header.php');?>
+<?php include ('../apparence/header.php');
+include ('../controleur/DiagnosticControler.php');
+echo<<<SHOW_INFOS
 
-<!-- Container pour l'affichage de dossier -->
 <div class="form-row form-group form-control">          
       <!-- Container pour les infos du dossier -->      
       <div class="container objContainer">
@@ -44,27 +45,30 @@
                         <form>            
                               <div class="col-6 shadow">
                                     <label for="NumeroDossier">Numéro de dossier</label>
-                                    <input type="text" class="form-control" id="NumeroDossier" placeholder="">   
+                                    <input type="text" class="form-control" id="NumeroDossier" value="$folderNum">
                               </div>            
                               <div class="col-6 shadow">
                                     <label for="TypeDossier">Type de dossier</label>
-                                    <input type="text" class="form-control" id="TypeDossier" placeholder=""> 
+                                    <input type="text" class="form-control" id="TypeDossier" value="$folderType"> 
                               </div>
 
                               <div class="col-6 shadow">
-                                    <label for="NuméroFournisseur">Numéro de fournisseur</label>
-                                    <input type="text" class="form-control" id="NuméroFournisseur" placeholder="">
+                                    <label for="NomFournisseur">Nom du fournisseur</label>
+                                    <input type="text" class="form-control" id="NomFournisseur" value="$supplierName">
                               </div>
 
                               <div class="col-6 shadow">
                                     <label for="NumeroCommande">Numéro de commande</label>
-                                    <input type="text" class="form-control" id="NumeroCommande"> 
+                                    <input type="text" class="form-control" id="NumeroCommande" value="$orderNum"> 
                               </div>
                               <div class="col-6 shadow">
                                     <label for="DenominationClient">Dénomination Client</label>
-                                    <input type="text" class="form-control" id="DenominationClient"> 
-                              </div>
-
+                                    <input type="text" class="form-control" id="DenominationClient" value="$clientName"> 
+                              </div> 
+                              <div class="col-6 shadow">
+                                    <label for="DateCreation">Date de création du dossier</label>
+                                    <input type="text" class="form-control" id="DateCreation" value="$folderCreation"> 
+                              </div> 
                               <div class="col-6 file-field align-self-end">
                                     <div class="button btn-sm">
                                     <input type="file">
@@ -78,7 +82,7 @@
 
                         <div class="col-sm-6">
                               <label for="bio">Détails dossier</label>
-                              <textarea class="form-control shadow" id="DetailDossier" rows="3"></textarea>
+                              <textarea class="form-control shadow" id="DetailDossier" rows="3">$folderCommentary</textarea>
                         </div>        
                         <div class="col-sm-6">
                               <label for="bio">Liste diagnostique</label>
@@ -88,14 +92,14 @@
 
                   <!-- Container pour les boutons-->
                   <div class="form-row form-group form-control d-grid gap-3">
-                        <button type="button" class="button mx-3 mb-3">Reex client et solde dossier</button>
-                        <button type="button" class="button mx-3 mb-3">Reex client avec décompte de stock sans solde</button>
-                        <button type="button" class="button mx-3 mb-3">Reex client avec décompte de stock avec solde</button>
-                        <button type="button" class="button mx-3 mb-3">Remise en stock</button>
-                        <button type="button" class="button mx-3 mb-3">Solde du dossier</button>
-                        <button type="button" class="button mx-3 mb-3">Quitter</button>
+                        <a class="button mx-3 mb-3 btn-lg" href="#" role="button">Remise en stock</a>
+                        <a class="button mx-3 mb-3 btn-lg" href="#" role="button">Solde du dossier</a>
+                        <a class="button mx-3 mb-3 btn-lg" href="index.php" role="button">Quitter</a>
+
                   </div>      
             </form>
       </div>     
 </div>
+SHOW_INFOS
+?>
 </body>
