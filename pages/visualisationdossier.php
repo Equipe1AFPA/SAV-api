@@ -60,16 +60,16 @@
                                                 </thead>
                                                 <tbody>
                                                       <tr>
-                                                            <td>$folderName</td>
+                                                            <td>Nom : $folderName</td>
                                                       </tr>
                                                       <tr>
-                                                            <td>$adrLine1</td>
+                                                            <td>Adresse : $adrLine1</td>
                                                       </tr>
                                                       <tr>
-                                                            <td>$adrLine2</td>
+                                                            <td>Complément d'adresse : $adrLine2</td>
                                                       </tr>
                                                       <tr>
-                                                            <td>$adrLine3</td>
+                                                            <td>Complément d'adresse : $adrLine3</td>
                                                       </tr>
                                                       <tr>
                                                             <td>Code Postal : $adrZip</td>

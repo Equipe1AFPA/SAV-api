@@ -65,10 +65,10 @@
                               <input class="form-control" id="system-search" name="adrState" placeholder="Région">
                               </div>
                         </div>
-                        <button type="submit">Valider</button>
-</form>
-<?php include('../controleur/OrderControler.php');?>
+                        <button class="button btn-block btn-lg" type="submit">Rechercher</button>
                   </div>
+                  <?php include('../controleur/OrderControler.php');?>
+            </form>
                   <div class="form-row form-group form-control">
                         <h5 class="container">Numéro de dossier</h5>
                         <div class="col-4">
@@ -103,7 +103,6 @@
                               </select>
                         </div>
                   </div>
-
                   <div class="form-row form-group form-control">
                         <h5 class="container">Nom du client</h5>            
                         <div class="col">
@@ -120,5 +119,6 @@
                   <div class="form-group">
                         <a class="button btn-block btn-lg" href="Details.php" role="button">Création de ticket</a>
                   </div>
-              </div>
-            </form>
+      </div>
+</body>
+</html>
