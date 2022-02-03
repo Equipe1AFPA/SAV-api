@@ -1,4 +1,3 @@
-<!-- GERMAIN FLORIAN : réalisation de la classe du dossier SAV (25/01)-->
 
 <?php 
 

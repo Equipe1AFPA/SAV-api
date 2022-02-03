@@ -4,8 +4,8 @@ class OrderRepository {
 
     // Fonction pour donner des valeurs à nos variables dans l'objet Order que nous sommes entrain de creer. On l'utilise plusieur fois dans les fonctions suivante donc on les centralise dans une fonction.
     private static function createOrderFromMysqlRow(array $mysqlRow) : Order {
-        $folder = new Order();
-        $folder->setOrdernumber($mysqlRow['OHR_ORDERNUMBER'])
+        $order = new Order();
+        $order->setOrdernumber($mysqlRow['OHR_ORDERNUMBER'])
             ->settype($mysqlRow['FOL_TYPE'])
             ->setDenomination($mysqlRow['ADR_DENOMINATION'])
             ->setStatus($mysqlRow['FOL_STATUS'])
@@ -18,7 +18,7 @@ class OrderRepository {
             ->setAdrCity($mysqlRow['ADR_CITY'])
             ->setDate($mysqlRow['FOL_CREATIONDATE'])
             ->setId($mysqlRow['OHR_ID']);            
-        return $folder;
+        return $order;
     }
 
     // Fonction pour se connecter à la DB, préparer la requête SQL.
