@@ -1,4 +1,9 @@
 <?php
+/**
+* La classe FolderRepository permet de créer les dossiers.
+*
+* @author Florian DE BIASI
+*/
 
 class FolderRepository {
 

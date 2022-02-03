@@ -1,4 +1,9 @@
 <?php
+/**
+* La classe Login permet de gérer l'identification.
+*
+* @author Florian DE BIASI
+*/
 
 
 class Login {

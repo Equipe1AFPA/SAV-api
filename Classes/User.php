@@ -1,4 +1,10 @@
 <?php
+/**
+* La classe User permet de gérer la création d'un utilisateur.
+*
+* @author Florian DE BIASI
+*/
+
 class User {
     private $id;
     private $identifiant;

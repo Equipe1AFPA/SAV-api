@@ -1,5 +1,10 @@
 <?php
 
+/**
+*
+* @author Florian DE BIASI
+*/
+
 // Fonction qui permet de générer le tableau d'affichage des dossiers.
 function showTable($pTable){
     echo <<<FOLDER_TABLE_HEADER

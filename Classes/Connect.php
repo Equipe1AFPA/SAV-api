@@ -1,4 +1,10 @@
 <?php
+
+/**
+* Singleton de la classe Connect qui permet la connexion à la base de données.
+*
+* @author Florian DE BIASI
+*/
  
 class Connect {
 

@@ -1,4 +1,10 @@
 <?php
+
+/**
+*
+* @author Florian DE BIASI
+*/
+
 $myID = $_GET['folid'];
 
 $folder = FolderRepository::getByID($myID);

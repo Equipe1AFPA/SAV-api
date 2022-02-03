@@ -1,5 +1,10 @@
 <?php
 
+/**
+*
+* @author Florian DE BIASI
+*/
+
     // Vérification que le $_POST n'est pa vide pour effectuer la suite.
 
     if(!empty($_POST)){

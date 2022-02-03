@@ -1,5 +1,10 @@
 <?php
 
+/**
+*
+* @author Florian DE BIASI
+*/
+
     // On teste si une valeur est entrée dans un des POST sinon ne se charge pas.
     if($_POST){
 

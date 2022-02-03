@@ -1,6 +1,9 @@
-<!-- GERMAIN FLORIAN : réalisation de la classe du dossier SAV (25/01)-->
-
 <?php 
+/**
+* La classe Order permet de créer les commandes.
+*
+* @author Florian DE BIASI
+*/
 
 class Order {
     private $id;

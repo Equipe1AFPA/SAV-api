@@ -1,5 +1,10 @@
 
-<?php 
+<?php  
+/**
+* La classe Folder permet de gérer les dossiers.
+*
+* @author Florian DE BIASI
+*/
 
 class Folder {
     private $id;
