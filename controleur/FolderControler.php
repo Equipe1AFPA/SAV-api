@@ -1,6 +1,6 @@
 <?php
 
-// Fonction qui permet de générer le tableuau d'affichage des dossiers.
+// Fonction qui permet de générer le tableau d'affichage des dossiers.
 function showTable($pTable){
     echo <<<FOLDER_TABLE_HEADER
             <table class="table table-bordered table-striped table-hover">
